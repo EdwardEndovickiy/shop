@@ -1,0 +1,11 @@
+<md-toolbar color="primary">
+  <a routerLink="" class="home"><img src="../assets/logo.png" alt="#parking" class="logo"></a>
+</md-toolbar>
+<md-card class="card-feed-entry" *ngFor="let item of items">
+  <md-card-title>{{item.name}}</md-card-title>
+  <img md-card-image src="{{ item.img }}">
+  <md-card-subtitle>{{item.price}} руб. / {{item.volume}} мл.</md-card-subtitle>
+  <md-card-content><pre>{{item.discription}}</pre></md-card-content>
+  <button md-button color="accent" (click)="onOriginal(item.link)">Оригинал</button>
+  <hr>
+</md-card>
